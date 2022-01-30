@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  max-home-automation:
+    image: bettwanze/max-home-automation:latest
+    container_name: max-home-automation
+    ports:
+      - 5900:5900
+      - 1883:1883
+      - 8080:80
+    volumes:
+      - ./config:/config
