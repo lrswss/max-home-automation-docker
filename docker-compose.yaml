@@ -4,6 +4,8 @@ services:
   max-home-automation:
     image: bettwanze/max-home-automation:latest
     container_name: max-home-automation
+    privileged: true
+    restart: unless-stopped
     ports:
       - 5900:5900
       - 1883:1883
